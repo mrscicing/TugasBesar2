@@ -1,0 +1,23 @@
+.floatnew{
+    float: left;
+};
+.floatnew2{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.nostyle{
+    all: unset;
+}
+.nostyle:hover{
+    all: unset;
+}
+.hide{
+    display: none;
+}
+.notifs{
+    font-size: 9pt;
+    margin-left: 15pt;
+    color: rgba(255, 7, 7, 0.767);
+}
