@@ -82,11 +82,11 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Kode Akun</label>
-                            <input type="text" class="form-control"placeholder="Masukkan Kode" name="kode_akun">
+                            <input type="text" class="form-control"placeholder="Masukkan Kode" name="kode_akun3">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Nama Akun</label>
-                            <input type="text" class="form-control"  placeholder="Masukkan Nama" name="nama_akun">
+                            <input type="text" class="form-control"  placeholder="Masukkan Nama" name="nama_akun3">
                         </div>
                         <button type="submit" class="btn btn-primary" name="submitx">Submit</button>
                     </form>

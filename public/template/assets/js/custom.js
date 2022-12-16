@@ -71,7 +71,7 @@ function FormSelectAkun(Nomor){
     var output = [];
     output.push('<option value = "">Pilih Data</option>');
     //ambil datanya disini
-        $.getJSON('/Transaksi/akun3',function(data){
+        $.getJSON('/transaksi/akun3',function(data){
             $.each(data, function(key, value){
                 output.push('<option value="' + value.kode_akun3 +'">' +value.kode_akun3 +'|'+value.nama_akun3+ '</option>' );
             });
@@ -82,11 +82,19 @@ function FormSelectStatus(Nomor){
     var output = [];
     output.push('<option value="">Pilih Data</option>');
     //ambil datanya disini
-        $.getJSON('/Transaksi/status',function(data){
+        $.getJSON('/transaksi/status',function(data){
             $.each(data,function(key,value){
                 output.push('<option value="' + value.id_status + '">'+ value.status + '</option>');
             });
             $('#id_status'+Nomor).html(output.join(''));
         });
+}
+function hitung(){
+    var nilai = $('input[name="nilaix"]').val();
+    var waktu = $('input[name="waktux"]').val();
+    var jumlah = parseInt(nilai) / parseInt(waktu);
+    $('input[name="jumlahx"]').val(jumlah);
+
+
 }
 

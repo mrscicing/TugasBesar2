@@ -7,19 +7,27 @@
   <title>SIA | Akuntansi</title>
 
   <!-- General CSS Files -->
+ <!-- General CSS Files -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
   <link rel="stylesheet" href="<?php base_url()?>/template/node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="<?php base_url()?>/template/node_modules/@fortawesome/fontawesome-free/css/all.css">
-  <link rel="stylesheet" href="<?php base_url()?>/template/node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"> -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+  <script src="<?php base_url()?>/template/node_modules/chart.js/dist/chart.min.js"></script>
+
+
+  
   <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">   -->
+
   <!-- CSS Libraries -->
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="<?php base_url()?>/template/assets/css/style.css">
   <link rel="stylesheet" href="<?php base_url()?>/template/assets/css/style2.css">
   <link rel="stylesheet" href="<?php base_url()?>/template/assets/css/components.css">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+
 </head>
 
 <body>
@@ -246,7 +254,7 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html">Akuntansi Web</a>
+            <a href="<?php echo site_url('chart')?>">Akuntansi Web</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html">St</a>
@@ -265,16 +273,17 @@
               
               <li class="menu-header">Activities</li>
 
-              <li ><a class="nav-link" href="#"><i class="fas fa-th-large"></i> <span>Jurnal Keuangan</span></a></li>
-              <li ><a class="nav-link" href="#"><i class="fas fa-th-large"></i> <span>Posting</span></a></li>
-              <li ><a class="nav-link" href="#"><i class="fas fa-th-large"></i> <span>Neraca Saldo</span></a></li>
+              <li ><a class="nav-link" href="<?php echo site_url('jurnalumum/index')?>"><i class="fas fa-book"></i> <span>Jurnal Umum</span></a></li>
+              <li ><a class="nav-link" href="<?php echo site_url('posting/index')?>"><i class="fas fa-bookmark"></i> <span>Posting</span></a></li>
+              <li ><a class="nav-link" href="<?php echo site_url('neracasaldo/index')?>"><i class="fas fa-calculator"></i> <span>Neraca Saldo</span></a></li>
               <li ><a class="nav-link" href="#"><i class="fas fa-th-large"></i> <span>Neraca Lajur</span></a></li>
               
               <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Transaksi</span></a>
                 <ul class="dropdown-menu">  
                     <li><a class="nav-link" href="<?php echo site_url('transaksi/index')?>">Transaksi Jurnal</a></li>
-                    <li><a class="nav-link" href="layout-transparent.html">Transaksi Penjualan</a></li>
+                    <li><a class="nav-link" href="<?php echo site_url('penyesuaian/index')?>">Transaksi Penyesuaian</a></li>
+                    <li><a class="nav-link" href="<?php echo site_url('jurnalpenyesuaian/index')?>">Jurnal Penyesuaian</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -315,10 +324,15 @@
   <script src="<?php base_url()?>/template/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="<?php base_url()?>/template/node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
   <script src="<?php base_url()?>/template/node_modules/moment/min/moment.min.js"></script>
+  <script src="<?php base_url()?>/template/assets/js/page/modules-chartjs.js"></script>
   <script src="<?php base_url()?>/template/assets/js/stisla.js"></script>
-  <script src="<?php base_url()?>/template/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <!-- <script src="<?php base_url()?>/template/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script> -->
+  <!-- <script src="<?php base_url()?>/template/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js"></script> -->
+  <!-- <script src="<?php base_url()?>/template/node_modules/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css"></script> -->
   <script src="<?php base_url()?>/template/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
-  <!-- <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script> -->
+  <script src="<?php base_url()?>/template/node_modules/datatables.net/js/jquery.dataTables.js"></script>
+  <!-- <script src="<?php base_url()?>/template/node_modules/Dist-DataTables-Responsive-Bootstrap4-master/js/responsive.bootstrap4.js"></script> -->
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
 
 
   <!-- JS Libraies -->

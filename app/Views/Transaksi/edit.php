@@ -117,7 +117,7 @@
                                             </select>
                                         </td>
                                         <td>
-                                        <input type="hidden" class="form-control" name="id_nilai[]" required value="<?php echo $item->id_nilai?>"> 
+                                        <input type="hidden" class="form-control" id="id_nilai" name="id_nilai[]" required value="<?php echo $item->id_nilai?>"> 
 
                                         </td>
                                     </tr>

@@ -12,7 +12,7 @@
                 <h1><?php echo $title ?></h1>
 
               </div>
-              <div class="col-2"><button type="submit" class="btn btn-danger" name="submitx"><a class="nostyle" href="<?php  echo site_url('akun3/add') ?>">Add Data</a></button></div>
+              <div class="col-2"><button type="submit" class="btn btn-danger" name="submitx"><a class="nostyle" href="<?php  echo site_url('akun3/addakun') ?>">Add Data</a></button></div>
            </div>
            </div>
         </div>
@@ -38,11 +38,11 @@
                         </div>
                     </div>
                 <?php endif ?>
-                <?php if(session()->getFlashdata('error')) :?>
+                <?php if(session()->getFlashdata('gagal')) :?>
                     <div class="alert alert-danger" role="alert"> 
                         <div class="row">
                             <div class="col-11">
-                            <?php echo session()->getFlashdata('error');?>
+                            <?php echo session()->getFlashdata('gagal');?>
 
                             </div>
                             

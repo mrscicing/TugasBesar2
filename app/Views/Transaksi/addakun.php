@@ -1,4 +1,5 @@
-<?php  $this->extend('layout/template3');?>
+<?php
+$this->extend('layout/template3');?>
 
 <?php $this->section('isi');?>
 

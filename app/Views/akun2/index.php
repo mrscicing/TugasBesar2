@@ -12,7 +12,7 @@
                 <h1><?php echo $title ?></h1>
 
               </div>
-              <div class="col-2"><button type="submit" class="btn btn-danger" name="submitx"><a class="nostyle" href="<?php  echo site_url('akun2/add') ?>">Add Data</a></button></div>
+              <div class="col-2"><button type="submit" class="btn btn-danger" name="submitx"><a class="nostyle" href="<?php  echo site_url('akun2/addakun') ?>">Add Data</a></button></div>
            </div>
            </div>
         </div>

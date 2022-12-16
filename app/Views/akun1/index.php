@@ -1,6 +1,6 @@
 <?php  $this->extend('layout/template');?>
 
-<?php $this->section('isi');?>
+<?php $this->section('isi')?>
 
 
 <div class="main-content">
@@ -12,7 +12,7 @@
                 <h1><?php echo $title ?></h1>
 
               </div>
-              <div class="col-2"><button type="submit" class="btn btn-danger" name="submitx"><a class="nostyle" href="<?php  echo site_url('akun1/add') ?>">Add Data</a></button></div>
+              <div class="col-2"><button type="submit" class="btn btn-danger" name="submitx"><a class="nostyle" href="<?php  echo site_url('akun1/addakun') ?>">Add Data</a></button></div>
            </div>
            </div>
         </div>
@@ -24,7 +24,7 @@
                       <h4>Table</h4>
                     </div>
                     <div class="container">
-            <div class="jshide" id="jshide">
+                    <div class="jshide" id="jshide">
                 <?php if(session()->getFlashdata('berhasil')) :?>
                     <div class="alert alert-success" role="alert"> 
                         <div class="row">
@@ -33,7 +33,7 @@
 
                             </div>
                             <div class="col-1">
-                                <p style="cursor:pointer; text-align:right" id="closejs" onclick="closeevn()"><i class="fas fa-times"></i></p>
+                                <p style="cursor:pointer; text-align:right" id="closejs" onclick="closeevn()">x</p>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
 
                             </div>
                             <div class="col-1">
-                                <p style="cursor:pointer; text-align:right" id="closejs" onclick="closeevn()"><i class="fas fa-times"></i></p>
+                                <p style="cursor:pointer; text-align:right" id="closejs" onclick="closeevn()">x</p>
                             </div>
                         </div>
                     </div>
@@ -105,6 +105,5 @@
         </div>
     </section>
 </div>
-
-
 <?php $this->endsection();?>
+

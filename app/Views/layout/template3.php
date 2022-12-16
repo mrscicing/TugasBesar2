@@ -246,7 +246,7 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html">Akuntansi Web</a>
+            <a href="<?php echo site_url('chart')?>">Akuntansi Web</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html">St</a>
@@ -265,16 +265,17 @@
               
               <li class="menu-header">Activities</li>
 
-              <li ><a class="nav-link" href="#"><i class="fas fa-th-large"></i> <span>Jurnal Keuangan</span></a></li>
-              <li ><a class="nav-link" href="#"><i class="fas fa-th-large"></i> <span>Posting</span></a></li>
-              <li ><a class="nav-link" href="#"><i class="fas fa-th-large"></i> <span>Neraca Saldo</span></a></li>
+              <li ><a class="nav-link" href="<?php echo site_url('jurnalumum/index')?>"><i class="fas fa-book"></i> <span>Jurnal Umum</span></a></li>
+              <li ><a class="nav-link" href="<?php echo site_url('posting/index')?>"><i class="fas fa-bookmark"></i> <span>Posting</span></a></li>
+              <li ><a class="nav-link" href="<?php echo site_url('neracasaldo/index')?>"><i class="fas fa-calculator"></i> <span>Neraca Saldo</span></a></li>
               <li ><a class="nav-link" href="#"><i class="fas fa-th-large"></i> <span>Neraca Lajur</span></a></li>
               
               <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Transaksi</span></a>
                 <ul class="dropdown-menu">  
                     <li><a class="nav-link" href="<?php echo site_url('transaksi/index')?>">Transaksi Jurnal</a></li>
-                    <li><a class="nav-link" href="layout-transparent.html">Transaksi Penjualan</a></li>
+                    <li><a class="nav-link" href="<?php echo site_url('penyesuaian/index')?>">Transaksi Penyesuaian</a></li>
+                    <li><a class="nav-link" href="<?php echo site_url('jurnalpenyesuaian/index')?>">Jurnal Penyesuaian</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -316,9 +317,9 @@
   <script src="<?php base_url()?>/template/node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
   <script src="<?php base_url()?>/template/node_modules/moment/min/moment.min.js"></script>
   <script src="<?php base_url()?>/template/assets/js/stisla.js"></script>
-  <script src="<?php base_url()?>/template/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-  <script src="<?php base_url()?>/template/node_modules/datatables.net/js/jquery.dataTables.min.js"></script>
-  <!-- <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script> -->
+  <!-- <script src="<?php base_url()?>/template/node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script> -->
+  <!-- <script src="<?php base_url()?>/template/node_modules/datatables.net/js/jquery.dataTables.min.js"></script> -->
+  <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
 
   <!-- JS Libraies -->
@@ -327,6 +328,7 @@
   <script src="<?php base_url()?>/template/assets/js/scripts.js"></script>
   <script src="<?php base_url()?>/template/assets/js/scripts2.js"></script>
   <script src="<?php base_url()?>/template/assets/js/custom.js"></script>
+  <script src="<?php base_url()?>/template/chart/node_modules/chart.js/dist/chart.js"></script>
 
   <!-- Page Specific JS File -->
 </body>

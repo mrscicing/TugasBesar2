@@ -1,7 +1,5 @@
 <?php
 
-use App\Controllers\akun2;
-
   $this->extend('layout/template2');?>
 
 <?php $this->section('isi');?>
@@ -59,7 +57,7 @@ use App\Controllers\akun2;
             </div>
             <div class="card-body p-0">
                 <div class="container">
-                    <form action="<?php echo site_url('/akun2/save')?>" method="$_POST">
+                    <form action="<?php echo site_url('akun2/save')?>" method="$_POST">
                         <?php csrf_field() ?>
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Kode Akun - 1</label>

@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+
+
 class akun1 extends BaseController
 {
     
@@ -40,7 +42,7 @@ class akun1 extends BaseController
         ];
         $this->db->table('akun1s')->insert($data);
         session()->setFlashdata('berhasil','Data Berhasil Ditambahkan');
-        return redirect()->to('akun1/add')->with('success','Data Berhasil Disimpan');
+        return redirect()->to('akun1/addakun')->with('success','Data Berhasil Disimpan');
     }
     public function edit($id)
     {   

@@ -54,7 +54,7 @@ class akun3 extends BaseController
         ];
         $this->db->table('akun3s')->insert($data);
         session()->setFlashdata('berhasil','Data Berhasil Ditambahkan');
-        return redirect()->to('akun3/add')->with('success','Data Berhasil Disimpan');
+        return redirect()->to('akun3/addakun')->with('success','Data Berhasil Disimpan');
     }
     public function edit($id)
     {   
@@ -76,7 +76,6 @@ class akun3 extends BaseController
         if(!$this->validate([
             'kode_akun3'=>'required|numeric[akun3s.kode_akun3]'
         ])){
-            session()->setFlashdata('notif','*!Masukkan Input Berupa Angka');
             return redirect()->to('akun3/edit/re')->with('gagal','Data Gagal Terupdate');
         };
 

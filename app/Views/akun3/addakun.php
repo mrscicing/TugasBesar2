@@ -55,7 +55,7 @@
             </div>
             <div class="card-body p-0">
                 <div class="container">
-                    <form action="<?php echo site_url('/akun3/save')?>" method="$_POST">
+                    <form action="<?php echo site_url('akun3/save')?>" method="$_POST">
                         <?php csrf_field() ?>
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Kode Akun - 1</label>

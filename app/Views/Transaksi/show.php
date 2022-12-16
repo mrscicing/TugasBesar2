@@ -22,6 +22,7 @@
         <div class="card">
             <div class="card-header">
                 <h4>Detail Data</h4>
+                
             </div>
             <div class="container">
             <div class="jshide" id="jshide">
@@ -65,6 +66,7 @@
                                     <?php echo $dttransaksi->kwitansi?>
                                 </td>
                                 </tr>
+                                <tr>
                                 <td style="width:12% ;" >Tanggal</td>
                                 <td style="width:5% ;">:</td>
                                 <td >
@@ -103,7 +105,7 @@
                           <td><?php echo $value->kode_akun3?></td>
                           <td><?php echo $value->nama_akun3 ?></td>
                           <td><?php echo number_format( $value->debit ,0,'.','.')?></td>
-                          <td><?php echo $value->kredit ?></td>
+                          <td><?php echo number_format( $value->kredit ,0,'.','.')?></td>
                           <td><?php echo $value->status ?></td>
                           </tr>
                         <?php $x ++;

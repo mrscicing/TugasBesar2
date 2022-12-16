@@ -9,7 +9,7 @@
            <div class="container">
            <div class="row">
               <div class="col-10">
-                <h1><?php echo $title ?></h1>
+                <h1>Jurnal Transaksi</h1>
 
               </div>
               <div class="col-2"><button type="submit" class="btn btn-danger" name="submitx"><a class="nostyle" href="<?php  echo site_url('transaksi/add') ?>">Add Data</a></button></div>
@@ -21,7 +21,7 @@
         <div class="section-body">
         <div class="card">
                      <div class="card-header">
-                      <h4>Table</h4>
+                      <h4>Data Jurnal Transaksi</h4>
                     </div>
                     <div class="container">
             <div class="jshide" id="jshide">

@@ -45,7 +45,7 @@ class Transaksi extends BaseController
             // 'transaksi' => $result,
             'title'=>'Transaksi'
         ];
-        return view('Transaksi/addakun',$data);
+        return view('transaksi/addakun',$data);
     }
     public function save()
     {
@@ -79,14 +79,14 @@ class Transaksi extends BaseController
 
         $this->NilaiModel->insertBatch($data2);
 
-        return redirect()->to('Transaksi/add')->with('success','Data Berhasil Disimpan');
+        return redirect()->to('transaksi/add')->with('success','Data Berhasil Disimpan');
     }
-    public function edit($id = null)
+    public function edit($id)
     {   
          $transaksi = $this->TransaksiModel->find($id);
          $akun3 = $this->Akun3Model->findall();
          $status = $this->StatusModel->findall();
-         $nilai = $this->NilaiModel->findall();
+         $nilai = $this->NilaiModel->where(['id_transaksi'=>$id])->findall();
          $data ['dtnilai'] = $nilai;
 
          if(is_object($transaksi)){
@@ -94,7 +94,7 @@ class Transaksi extends BaseController
             $data['dtstatus'] = $status;
             $data['dttransaksi'] = $transaksi;
 
-            return view('Transaksi/edit' , $data);
+            return view('transaksi/edit' , $data);
         }else{
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
@@ -136,14 +136,14 @@ class Transaksi extends BaseController
 
         $this->NilaiModel->updateBatch($result, 'id_nilai');
         // $this->TransaksiModel->update($data)->where(['id_Transaksi'=>$idakn]);
-        return redirect()->to('Transaksi/index')->with('berhasil','Data Berhasil Terupdate');
+        return redirect()->to('transaksi/index')->with('berhasil','Data Berhasil Terupdate');
     }
     public function delete($id)
     {
         $this->db->table('tb_transaksi')->where(['id_Transaksi'=>$id])->delete();
       
         session()->setFlashdata('delete','Data Berhasil Di Hapus');
-        return  redirect()->to(site_url('Transaksi/index'));
+        return  redirect()->to(site_url('transaksi/index'));
     }
 
     public function show($id)
@@ -159,7 +159,7 @@ class Transaksi extends BaseController
            $data['dtstatus'] = $status;
            $data['dttransaksi'] = $transaksi;
 
-           return view('Transaksi/show' , $data);
+           return view('transaksi/show' , $data);
        }else{
            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
        }
