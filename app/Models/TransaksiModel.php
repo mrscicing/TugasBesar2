@@ -32,4 +32,12 @@ class TransaksiModel extends Model
             $nomor_kwitansi = str_pad($no,4,"0",STR_PAD_LEFT);
             return $nomor_kwitansi;
     }
+    public function get_jurnalumum()
+    {
+        $sql = $this->db->table('tb_nilai')
+        -> join('tb_transaksi','tb_transaksi.id_transaksi=tb_nilai.id_transaksi')
+        -> join('akun3s','akun3s.kode_akun3=tb_nilai.kode_akun3')
+        -> orderBy('id_nilai');
+        return $sql->get()->getResultObject();
+    }
 }
